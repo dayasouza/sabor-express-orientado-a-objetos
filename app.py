@@ -1,20 +1,18 @@
 #Importando a classe para o programa principal
 from modelos.restaurante import Restaurante
+from modelos.cardapio.bebida import Bebiba
+from modelos.cardapio.prato import Prato
 
 #Criando e instanciando os restaurantes
 restaurante_praca = Restaurante('Praça', 'Gourmet')
-restaurante_mexicano = Restaurante('Mexican Food', 'mexicano')
-restaurante_japones = Restaurante('japa', 'japones')
-
-#alterando o estado de um restaurante
-restaurante_japones.alternar_estado()
-restaurante_japones.receber_avaliacao('Gui', 10)
-restaurante_japones.receber_avaliacao('Lais', 8)
-restaurante_japones.receber_avaliacao('Emy', 5)
+bebida_suco = Bebiba('Suco de Melancia', 5.0, 'grande')
+prato_paozinho = Prato('Pãozinho', 2.00, 'O melhor pão da cidade')
+restaurante_praca.adicionar_no_cardapio(bebida_suco)
+restaurante_praca.adicionar_no_cardapio(prato_paozinho)
 
 #criando o método main
 def main():
-    Restaurante.listar_restaurantes()
+    restaurante_praca.exibir_cardapio
 
 #informando que esse é o programa principal
 if __name__ == '__main__':
