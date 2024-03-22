@@ -1,15 +1,14 @@
 class Restaurante:
-    #Atributos 
-    nome = ''
-    categoria = ''
-    ativo = False
+    #construtor
+    def __init__(self, nome, categoria):
+        #Atributos 
+        self.nome = nome
+        self.categoria = categoria
+        self.ativo = False
 
 #Objetos
-restaurante_praca = Restaurante()
-restaurante_praca.nome = 'Praça'
-restaurante_praca.categoria = 'Gourmet'
-
-restaurante_pizza = Restaurante()
+restaurante_praca = Restaurante('Praça', 'Gourmet')
+restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
 
 restaurantes = [restaurante_praca, restaurante_pizza]
 
